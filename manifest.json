@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "HNG AI Page Summarizer",
+  "version": "1.0",
+  "description": "Extracts page content and generates AI summaries.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
